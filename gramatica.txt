@@ -1,0 +1,84 @@
+Terminales = { let id if ( ) { } for , ; int string boolean entero cadena print input return = < > + - || && lambd eof -= function }
+NoTerminales = { P0 P B F T S S1 X C L Q H A K E E1 O O1 R R1 U U1 V V1 M N N1 }
+Axioma = P0
+Producciones = {
+	P0 -> P				////1
+	P -> B P 			////2	
+	P -> F P 			////3
+	P -> eof				////4
+
+	B -> let T id ; 			////5
+	B -> if ( E ) S			////6			
+	B -> S				////7	
+	B -> for ( M ; E ; N ) { C }	////8
+
+	T -> string			////9
+	T -> int				////10
+	T -> boolean			////11
+
+	S -> id S1			////12
+	S -> print ( E ) ; 		////13
+	S -> input ( id ) ;		////14
+	S -> return X ;			////15
+	S1 -> = E ;			////16
+	S1 -> ( L ) ;			////17
+	S1 -> -= E ;			////18
+
+	X -> E				////19
+	X -> lambd			////20
+
+	C -> B C				////21
+	C -> lambd			////22
+		
+	L -> E Q				////23
+	L -> lambd			////24
+
+	Q -> , E Q			////25
+	Q -> lambd			////26
+
+	F -> function id H ( A ) { C }	////27
+
+	H -> T				////28
+	H -> lambd			////29
+
+	A -> T id K			////30
+	A -> lambd			////31
+	
+	K -> , T id K			////32
+	K -> lambd			////33
+
+	M -> id = E			////34
+	M -> lambd			////35
+
+	E -> O E1			////36
+	E1 -> || O E1			////37
+	E1 -> lambd			////38
+	
+	O -> R O1			////39
+	O1 -> && R O1			////40
+	O1 -> lambd			////41
+
+	R -> U R1			////42
+	R1 -> < U R1			////43
+	R1 -> > U R1			////44
+	R1 -> lambd			////45
+
+	U -> V U1			////46
+	U1 -> + V U1			////47
+	U1 -> - V U1			////48
+	U1 -> lambd			////49
+
+	V -> id	V1			////50
+	V -> entero			////51
+	V -> cadena			////52
+	V -> ( E )			////53
+	V1 -> lambd			////54
+	V1 -> ( L )			////55
+	
+	N -> id N1			////56
+	N1 -> = E			////57
+	N1 -> -= E			////58	
+	N -> lambd			////59
+	
+	
+}

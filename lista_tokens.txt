@@ -1,0 +1,31 @@
+1 -> id
+2 -> =
+3 -> (
+4 -> )
+5 -> {
+6 -> }
+7 -> +
+8 -> -
+9 -> -=
+10 -> <
+11 -> >
+12 -> &&
+13 -> ||
+14 -> int
+15 -> cadena
+16 -> ,
+17 -> ;
+18 -> 
+19 -> 
+20 -> 
+PALABRAS RESERVADAS
+21 -> int
+22 -> boolean
+23 -> if
+24 -> for
+25 -> let
+26 -> string
+27 -> print
+28 -> input
+29 -> return
+30 -> function
